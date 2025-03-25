@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    
+    <!-- Add the CSS styles directly here -->
+    <style>
+      /* Make sure the image fills the entire screen */
+      #state-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Keep the image behind other content */
+        display: block; /* Ensures the image is visible */
+      }
+    </style>
+
+    <style>
+      /* Make sure the video fills the entire screen */
+      #state-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 98%;
+        height: 100%;
+        object-fit: cover; /* Ensures the video covers the screen */
+        z-index: -1; /* Keep the video behind other content */
+        display: block; /* Makes the video visible */
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <!-- The image element, initially hidden, will be shown when updated by the JS -->
+    <img id="state-image" style="display: none;" />
+
+    <!-- The video element, initially hidden, will be shown when updated by the JS -->
+    <video id="state-video" style="display: none;">
+      <!-- Video will be dynamically added here by JS -->
+    </video>
+
+    <!-- Audio element to play sounds -->
+    <audio id="state-sound" preload="auto"></audio>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
